@@ -1,7 +1,9 @@
-<!--<p><%#= package.tracking_number %></p>-->
-<%#= link_to "Delete", courier_package_path(@courier, package.id), method: :delete, data: { confirm: "Are you sure?" } %>
-<%#= link_to "Mark as Complete", complete_courier_package_path(@courier, package.id), method: :patch %>
-<%#= link_to "Edit", complete_courier_package_path(@courier, package.id), method: :patch %>
+<!---
+<p><%= package.tracking_number %></p>
+<%= link_to "Delete", courier_package_path(@courier, package.id), method: :delete, data: { confirm: "Are you sure?" } %>
+<%= link_to "Mark as Complete", complete_courier_package_path(@courier, package.id), method: :patch %>
+<%= link_to "Edit", complete_courier_package_path(@courier, package.id), method: :patch %>
+-->
 <div class="row clearfix">
   <% if package.completed? %>
     <div class="complete">
@@ -33,7 +35,7 @@
       <%# end %>
 <!--    </div>-->
 <!--    <div class="package">-->
-<!--      <p style="opacity: 0.4;"><strike><%#= package.delivery_status %></strike></p>-->
+<!--      <p style="opacity: 0.4;"><span style="text-decoration: line-through;"><%#= package.tracking_number %></span></p>-->
 <!--    </div>-->
 <!--    <div class="trash">-->
       <%#= link_to courier_package_path(@courier, package.id), method: :delete, data: { confirm: "Are you sure?" } do %>
@@ -53,7 +55,7 @@
       <%# end %>
 <!--    </div>-->
 <!--    <div class="package">-->
-<!--      <p><%#= package.delivery_status %></p>-->
+<!--      <p><%#= package.tracking_number %></p>-->
 <!--    </div>-->
 <!--    <div class="trash">-->
       <%#= link_to courier_package_path(@courier, package.id), method: :delete, data: { confirm: "Are you sure?" } do %>
