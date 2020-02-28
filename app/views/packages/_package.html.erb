@@ -1,13 +1,9 @@
-<!---
-<p><%= package.tracking_number %></p>
-<%= link_to "Delete", courier_package_path(@courier, package.id), method: :delete, data: { confirm: "Are you sure?" } %>
-<%= link_to "Mark as Complete", complete_courier_package_path(@courier, package.id), method: :patch %>
-<%= link_to "Edit", complete_courier_package_path(@courier, package.id), method: :patch %>
--->
 <div class="row clearfix">
   <% if package.completed? %>
     <div class="complete">
-      <%= link_to "Mark as Complete", complete_courier_package_path(@courier, package.id), method: :patch %>
+      <%= link_to complete_courier_package_path(@courier, package.id), method: :patch do %>
+        <i style="opacity: 1;" class="fa fa-check"></i>
+        <% end %>
     </div>
     <div class="package">
       <p style="opacity: 0.4;"><span style="text-decoration: line-through;"><%= package.tracking_number %></span></p>
@@ -17,7 +13,9 @@
     </div>
   <% else %>
     <div class="complete">
-      <%= link_to "Mark as Complete", complete_courier_package_path(@courier, package.id), method: :patch %>
+      <%= link_to complete_courier_package_path(@courier, package.id), method: :patch do %>
+        <i style="opacity: 1;" class="fa fa-circle-thin"></i>
+      <% end %>
     </div>
     <div class="package">
       <p><%= package.tracking_number %></p>
@@ -27,46 +25,3 @@
     </div>
   <% end %>
 </div>
-<!--<div class="row clearfix">-->
-  <%# if package.completed? %>
-<!--    <div class="complete">-->
-      <%#= link_to complete_courier_package_path(@courier, package.id), method: :patch do %>
-<!--        <i style="opacity: 0.4;" class="fa fa-check"></i>-->
-      <%# end %>
-<!--    </div>-->
-<!--    <div class="package">-->
-<!--      <p style="opacity: 0.4;"><span style="text-decoration: line-through;"><%#= package.tracking_number %></span></p>-->
-<!--    </div>-->
-<!--    <div class="trash">-->
-      <%#= link_to courier_package_path(@courier, package.id), method: :delete, data: { confirm: "Are you sure?" } do %>
-<!--        <i class="fa fa-sort"></i>-->
-      <%# end %>
-      <%#= link_to courier_package_path(@courier, package.id), method: :patch, data: { confirm: "Are you sure?" } do %>
-<!--        <i class="fa fa-pencil"></i>-->
-      <%# end %>
-      <%#= link_to courier_package_path(@courier, package.id), method: :delete, data: { confirm: "Are you sure?" } do %>
-<!--        <i class="fa fa-trash"></i>-->
-      <%# end %>
-<!--    </div>-->
-  <%# else %>
-<!--    <div class="complete">-->
-      <%#= link_to complete_courier_package_path(@courier, package.id), method: :patch do %>
-<!--        <i class="fa fa-circle-thin"></i>-->
-      <%# end %>
-<!--    </div>-->
-<!--    <div class="package">-->
-<!--      <p><%#= package.tracking_number %></p>-->
-<!--    </div>-->
-<!--    <div class="trash">-->
-      <%#= link_to courier_package_path(@courier, package.id), method: :delete, data: { confirm: "Are you sure?" } do %>
-<!--        <i class="fa fa-sort"></i>-->
-      <%# end %>
-      <%#= link_to courier_package_path(@courier, package.id), method: :delete, data: { confirm: "Are you sure?" } do %>
-<!--        <i class="fa fa-pencil"></i>-->
-      <%# end %>
-      <%#= link_to courier_package_path(@courier, package.id), method: :delete, data: { confirm: "Are you sure?" } do %>
-<!--        <i class="fa fa-trash"></i>-->
-      <%# end %>
-<!--    </div>-->
-  <%# end %>
-<!--</div>-->

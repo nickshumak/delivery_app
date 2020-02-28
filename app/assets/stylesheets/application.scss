@@ -14,8 +14,7 @@
  *= require_self
  */
 
-$white_opaque: rgba(75, 236, 70, 0.62);
-$dark: #1F7972;
+$blue: rgba(110, 197, 226, 0.62);
 
 * {
   box-sizing: border-box;
@@ -50,7 +49,7 @@ body {
 .container {
   width: 50%;
   max-width: 750px;
-  background: $white_opaque;
+  background: $blue;
   margin: 3em auto 0 auto;
   border-radius: 7px;
   -webkit-box-shadow: 0 0 4px 3px rgba(0, 0, 0, .3);
@@ -61,7 +60,7 @@ body {
 .sub_container {
   width: 50%;
   max-width: 750px;
-  background: $white_opaque;
+  background: $blue;
   margin: 3em auto 0 auto;
   border-radius: 7px;
   -webkit-box-shadow: 0 0 4px 3px rgba(0, 0, 0, .3);
@@ -74,11 +73,12 @@ body {
   font-weight: 700;
   font-size: 1.0rem;
   text-transform: uppercase;
-  color: white;
   margin: 0;
+  .courier_email {
+    margin-bottom: 0;
+  }
   a {
     text-decoration: none;
-    color: white;
     transition: all .4s ease-in-out;
     &:hover {
       opacity: 0.4;
@@ -90,14 +90,18 @@ body {
   margin: 0 0 3em 0;
   text-align: center;
   font-size: 0.9em;
-  color: $dark;
+  color: blue;
   font-weight: 100;
 }
+
 
 .index_row {
   padding: 2em;
   border-bottom: 1px solid rgba(250, 250, 250, .3);
   .courier_email {
+    margin-bottom: 0;
+  }
+  .courier_name {
     margin-bottom: 0;
   }
 }
@@ -120,7 +124,7 @@ body {
       p {
         margin: 0;
         padding: 1em;
-        color: $dark;
+        color: black;
         font-weight: 100;
       }
     }
@@ -128,28 +132,25 @@ body {
       width: 10%;
       float: left;
       text-align: center;
-      border-left: 1px solid rgba(250, 250, 250, .3);
       padding: 1em 0;
     }
     .edit {
       width: 10%;
       float: left;
       text-align: center;
-      border-left: 1px solid rgba(250, 250, 250, .3);
       padding: 1em 0;
     }
     .trash {
       width: 10%;
       float: left;
       text-align: center;
-      border-left: 1px solid rgba(250, 250, 250, .3);
       padding: 1em 0;
     }
     i {
-      color: white;
       transition: all .4s ease-in-out;
       &:hover {
-        color: $dark;
+        background: black;
+        color: white;
       }
     }
   }
@@ -161,14 +162,14 @@ body {
       margin-right: 2%;
       display: inline-block;
       outline: none;
-      background: rgba(250, 250, 250, .4);
       border: none;
       height: 40px;
       border-radius: 4px;
       padding: 1em 2em;
     }
     input[type="submit"] {
-      background: rgba(250, 250, 250, .4);
+      background: white;
+      color: black;
       outline: none;
       border: none;
       height: 40px;
@@ -178,11 +179,9 @@ body {
       transition: all .4s ease-in-out;
       cursor: pointer;
       &:hover {
-        background: $dark;
+        background: black;
+        color: white;
       }
-    }
-    ::-webkit-input-placeholder {
-      color: $dark;
     }
   }
 }
@@ -191,10 +190,10 @@ body {
   display: block;
   margin: 1.5em auto 0 auto;
   text-align: center;
-  font-size: 0.8em;
-  color: white;
+  font-size: 1em;
+  color: black;
   a {
-    color: white;
+    color: black;
   }
 }
 
@@ -203,7 +202,7 @@ body {
 }
 
 label {
-  color: $dark;
+  color: white;
 }
 
 input[type="text"], textarea {
@@ -224,6 +223,7 @@ textarea {
 
 input[type="submit"] {
   background: white;
+  color: black;
   outline: none;
   border: none;
   height: 40px;
@@ -232,13 +232,9 @@ input[type="submit"] {
   display: inline-block;
   transition: all .4s ease-in-out;
   cursor: pointer;
-  color: $dark;
+
   &:hover {
-    background: $dark;
+    background: black;
     color: white;
   }
-}
-
-::-webkit-input-placeholder {
-  color: $dark;
 }
