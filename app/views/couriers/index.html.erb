@@ -1,0 +1,9 @@
+<% @couriers.each do |courier| %>
+  <div class="index_row clearfix">
+    <h2 class="courier_name"><%= link_to courier.name, courier %></h2>
+    <p class="courier_email"><%= courier.email %></p>
+  </div>
+<% end %><div class="links">
+  <%= link_to "New Courier", new_courier_path %>
+</div>
+<p id="notice"><%= notice %></p>
