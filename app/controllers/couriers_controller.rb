@@ -54,6 +54,8 @@ class CouriersController < ApplicationController
   # DELETE /couriers/1
   # DELETE /couriers/1.json
   def destroy
+    #@remove_foreign_key = RemoveForeignKey.new
+    #@remove_foreign_key.change
     @courier.destroy
     respond_to do |format|
       format.html { redirect_to couriers_url, notice: 'Courier was successfully destroyed.' }
@@ -62,13 +64,14 @@ class CouriersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_courier
-      @courier = Courier.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def courier_params
-      params.require(:courier).permit(:name, :email)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_courier
+    @courier = Courier.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def courier_params
+    params.require(:courier).permit(:name, :email)
+  end
 end
