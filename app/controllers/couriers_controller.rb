@@ -58,7 +58,7 @@ class CouriersController < ApplicationController
     #@remove_foreign_key.change
     @courier.destroy
     respond_to do |format|
-      format.html { redirect_to couriers_url, notice: 'Courier was successfully destroyed.' }
+      format.html { redirect_to couriers_url, notice: 'Courier was successfully fired.' }
       format.json { head :no_content }
     end
   end

@@ -52,7 +52,7 @@ body {
   background: $blue;
   margin: 3em auto 0 auto;
   border-radius: 7px;
-  -webkit-box-shadow: 0 0 4px 3px rgba(0, 0, 0, .3);
+  -webkit-box-shadow: 0 0 4px 3px rgba(226, 217, 178, 0.3);
   box-shadow: 0 0 4px 4px rgba(0, 0, 0, .03);
   padding: 1em 0;
 }
@@ -64,7 +64,7 @@ body {
   margin: 3em auto 0 auto;
   border-radius: 7px;
   -webkit-box-shadow: 0 0 4px 3px rgba(0, 0, 0, .3);
-  box-shadow: 0 0 4px 4px rgba(0, 0, 0, .03);
+  box-shadow: 0 0 4px 4px rgba(110, 197, 226, 0.03);
   padding: 1em 0;
 }
 
@@ -74,9 +74,6 @@ body {
   font-size: 1.0rem;
   text-transform: uppercase;
   margin: 0;
-  .courier_email {
-    margin-bottom: 0;
-  }
   a {
     text-decoration: none;
     transition: all .4s ease-in-out;
@@ -99,9 +96,6 @@ body {
   padding: 2em;
   border-bottom: 1px solid rgba(250, 250, 250, .3);
   .courier_email {
-    margin-bottom: 0;
-  }
-  .courier_name {
     margin-bottom: 0;
   }
 }
@@ -191,9 +185,9 @@ body {
   margin: 1.5em auto 0 auto;
   text-align: center;
   font-size: 1em;
-  color: black;
+  color: white;
   a {
-    color: black;
+    color: white;
   }
 }
 
@@ -210,7 +204,6 @@ input[type="text"], textarea {
   margin: .5em 2% 1em 0;
   display: inline-block;
   outline: none;
-  background: rgba(250, 250, 250, .4);
   border: none;
   height: 40px;
   border-radius: 4px;
