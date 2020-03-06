@@ -54,8 +54,6 @@ class CouriersController < ApplicationController
   # DELETE /couriers/1
   # DELETE /couriers/1.json
   def destroy
-    #@remove_foreign_key = RemoveForeignKey.new
-    #@remove_foreign_key.change
     @courier.destroy
     respond_to do |format|
       format.html { redirect_to couriers_url, notice: 'Courier was successfully fired.' }
